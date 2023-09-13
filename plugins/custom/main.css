@@ -34,3 +34,12 @@ body
     transform: translateY(0);
     opacity: 1;
 }
+.revealLeft{
+    transform: translateX(50px);
+    transition: 2s all ease;
+    opacity: 0;
+}
+.revealLeft.active{
+    transform: translateX(0);
+    opacity: 1;
+}
