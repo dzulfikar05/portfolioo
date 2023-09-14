@@ -7,33 +7,35 @@ $(document).ready(function () {
     });
   });
 
-  $('.owl-carousel').owlCarousel({
+  $(".owl-carousel").owlCarousel({
     center: true,
-    items:2,
-    loop:true,
-    margin:30,
-    responsive:{
-        600:{
-            items:4
-        }
-    }
-})
+    items: 2,
+    loop: true,
+    margin: 30,
+    responsive: {
+      600: {
+        items: 4,
+      },
+    },
+  });
 
-  $.each(list_carousel, function(index, value){
-
-    $("."+value).click(() => {
-      var id = $("."+value).data("id");
+  $.each(list_carousel, function (index, value) {
+    $("." + value).click(() => {
+      var id = $("." + value).data("id");
       // console.log(id);
       // $("#detail-" + id).removeClass("d-none");
       $.each(list_detail, function (i, v) {
-        var nameList = "detail-carousel-"+id;
+        var nameList = "detail-carousel-" + id;
         // console.log(nameList);
-        if(v == nameList){
-          $("." + v).removeClass("d-none").addClass("d-block")  ;  
-        }else{
-          $("." + v).removeClass("d-block").addClass("d-none");
+        if (v == nameList) {
+          $("." + v)
+            .removeClass("d-none")
+            .addClass("d-block");
+        } else {
+          $("." + v)
+            .removeClass("d-block")
+            .addClass("d-none");
         }
-        
       });
     });
   });
