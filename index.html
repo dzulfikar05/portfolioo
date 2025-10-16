@@ -9,12 +9,145 @@
     <link href="plugins/bootstrap53/bootstrap.min.css" rel="stylesheet">
     <link href='fonts.googleapis.com/css?family=Comfortaa:400,700' ; rel='stylesheet' type='text/css'>
 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <link href="plugins/custom/main.css" rel="stylesheet">
     <link href="plugins/custom/main-mob.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="plugins/owlcarousel/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="plugins/owlcarousel/dist/assets/owl.theme.default.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif !important;
+        }
+    </style>
+    <style>
+    body {
+        font-family: 'Poppins', sans-serif !important;
+        background-color: #f9fafc;
+        color: #1a1a1a;
+        line-height: 1.7;
+    }
+
+    /* Headline utama */
+    .headline-main {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #0b3d91;
+        letter-spacing: -0.5px;
+    }
+
+    /* Subheadline */
+    .slogan {
+        font-weight: 400;
+        font-size: 1.2rem;
+        letter-spacing: 0.5px;
+    }
+
+    /* Gambar profil */
+    .pp-main {
+        width: 100%;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .pp-main:hover {
+        transform: scale(1.03);
+    }
+
+    /* Tombol umum */
+    .btn {
+        font-weight: 500;
+        border-radius: 10px;
+        padding: 10px 18px;
+        transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 18px rgba(18, 96, 204, 0.3);
+    }
+
+    /* Section title (Education, Portfolio, Experience) */
+    .text-experience {
+        font-size: 2rem;
+        color: #0b3d91;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-left: 5px solid #1260cc;
+        padding-left: 12px;
+    }
+
+    /* Divider elegan */
+    hr {
+        border: none;
+        border-top: 2px solid #e2e8f0;
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Detail text sekunder */
+    .text-secondary {
+        color: #4b5563 !important;
+    }
+
+    /* Carousel style */
+    .owl-carousel img {
+        border-radius: 12px;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .owl-carousel img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Section reveal animation */
+    .reveal {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 0.7s ease-in-out;
+    }
+
+    .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Footer */
+    .footer {
+        text-align: center;
+        color: #6b7280;
+        font-size: 0.95rem;
+    }
+
+    .footer hr {
+        width: 80%;
+        margin: 30px auto;
+        border-top: 1px solid #e5e7eb;
+    }
+
+    /* Responsif halus */
+    @media (max-width: 768px) {
+        .headline-main {
+            font-size: 2.2rem;
+        }
+
+        .text-experience {
+            font-size: 1.6rem;
+        }
+
+        .btn {
+            width: 100%;
+        }
+    }
+</style>
+
 </head>
 
 <body>
@@ -22,10 +155,10 @@
         <div class="container mt-5">
             <div class="col-12">
                 <div class="text-secondary fs-6">HELLO WORLD !</div>
-
             </div>
         </div>
     </div>
+
     <div class="content">
         <div class="container ">
 
@@ -38,19 +171,22 @@
             </div>
 
             <div class="pt-md-5 d-flex row reveal">
-
                 <div class="col-md-4">
                     <img src="assets/pp.png" class="pp-main" alt="Dzulfikar Muhammad Al Ghifari">
                 </div>
                 <div class="col-md-5 ">
                     <div class="mx-md-5">
                         <span class="fs-4">
-                            Information Technology student of Polytechnic of Malang
+                            Business Information Systems Student of State Polytechnic of Malang
                         </span>
                         <p class="fs-5 mt-3 mt-md-5 fw-light">
-                            I have a passion for web programming. I am a Web Developer based in Malang. I usually work
-                            with PHP, JavaScript, jQuery, and MySql. I have completed several web development projects
-                            with experience in Front End Web Development, and Back End Web Development.
+                            I am a student majoring in Business Information Systems at the State Polytechnic of Malang,
+                            passionate about software development — especially in web-based applications and data
+                            management.
+                            I have hands-on experience developing Laravel-based projects, from backend to system
+                            integration.
+                            I am familiar with the Laravel ecosystem, eager to learn, and ready to contribute
+                            professionally with both technical and business understanding.
                         </p>
                     </div>
                 </div>
@@ -65,7 +201,7 @@
                         <span class="fs-5 ">Find Me Online</span>
                         <div class="flex-row mt-3">
                             <a class="text-dark" style="text-decoration: none"
-                                href="https://www.linkedin.com/in/dzulfikar-muhammad-al-ghifari-0b88b2232/"
+                                href="https://www.linkedin.com/in/dzulfikar-muhammad-al-ghifari-752612288/"
                                 target="blank">
                                 <img src="assets/linkedin.png" alt="" height="18px" style="object-fit: cover">
                                 Linkedin
@@ -88,36 +224,35 @@
                 <div class="mb-4 mb-md-5"></div>
                 <hr>
                 </hr>
-                <div class="row mt-4 mt-md-5">
-                    <div class="col-md-4 row">
-                        <span class="fw-bold fs-5">SMK PGRI 3 Malang</span>
-                        <span class=" text-secondary fs-5">(2020 - 2023)</span>
-                    </div>
-                    <div class="col-md-8 row mt-4 mt-md-0">
-                        <span class="fw-bold fs-5 mb-2">Software Engginer</span>
-                        <span class="text-secondary fs-5">- Learning basic of Website ( HTML & CSS )</span>
-                        <span class="text-secondary fs-5">- Learning basic of programming language ( Java, PHP, JS
-                            )</span>
-                        <span class="text-secondary fs-5">- Learning basic of database ( MySQL, Postgresql )</span>
-                        <span class="text-secondary fs-5">- Learning basic of Android Studio</span>
-                        <span class="text-secondary fs-5">- Learning basic of Web Applications</span>
-                    </div>
-                </div>
+
                 <div class="row mt-4 mt-md-5">
                     <div class="col-md-4 row">
                         <span class="fw-bold fs-5">State Polytechnic of Malang</span>
                         <span class=" text-secondary fs-5">(2023 - Present)</span>
                     </div>
                     <div class="col-md-8 row mt-4 mt-md-0">
-                        <span class="fw-bold fs-5 mb-2">Information Technology</span>
-                        <!-- <span class="text-secondary fs-5">- Learning basic of Website ( HTML & CSS )</span> -->
-                        <span class="text-secondary fs-5">- Learning basic of programming ( Java, Mobile App with Flutter )</span>
-                        <!-- <span class="text-secondary fs-5">- Learning basic of database ( MySQL, Postgresql )</span> -->
-                        <!-- <span class="text-secondary fs-5">- Learning basic of Android Studio</span> -->
-                        <!-- <span class="text-secondary fs-5">- Learning basic of Web Applications</span> -->
+                        <span class="fw-bold fs-5 mb-2">Business Information Systems</span>
+                        <span class="text-secondary fs-5">- Actively involved in developing Tracer Study and Student
+                            Discipline Management Systems using Laravel & MySQL.</span>
+                        <span class="text-secondary fs-5">- Learned system analysis, backend & frontend web development,
+                            and data management.</span>
+                    </div>
+                </div>
+                <div class="row mt-4 mt-md-5">
+                    <div class="col-md-4 row">
+                        <span class="fw-bold fs-5">SMK PGRI 3 Malang</span>
+                        <span class=" text-secondary fs-5">(2020 - 2023)</span>
+                    </div>
+                    <div class="col-md-8 row mt-4 mt-md-0">
+                        <span class="fw-bold fs-5 mb-2">Software Engineering</span>
+                        <span class="text-secondary fs-5">- Learned basic programming (PHP, Java, JavaScript)</span>
+                        <span class="text-secondary fs-5">- Learned mobile app development using Android Studio</span>
+                        <span class="text-secondary fs-5">- Learned database management (MySQL, PostgreSQL)</span>
+                        <span class="text-secondary fs-5">- Final project: Point of Sale (POS) Application</span>
                     </div>
                 </div>
             </div>
+
             <div class="col-12 pt-5 mb-0 mb-md-5 reveal">
                 <span class="text-experience fw-bold ">Portfolio</span>
                 <div class="mb-4 mb-md-5"></div>
@@ -125,58 +260,117 @@
                 </hr>
                 <div class="row mt-4 mt-md-5">
                     <div class="owl-carousel">
-                      
-                        <div >
-                            <img class="card-carousel-1"  data-id="1" src="assets/portfolio1.jpg"  alt="SiKato" style="object-fit: cover;" width="200px" height="200px">
+                        <div>
+                            <img class="card-carousel-1" data-id="1" src="assets/kol.jpg" alt="KOL Management System"
+                                style="object-fit: cover;" width="200px" height="200px">
                         </div>
-                        <div >
-                            <img class="card-carousel-2"  data-id="2" src="assets/portfolio2.png"  alt="Uangkoo" style="object-fit: cover;" width="200px" height="200px">
+                        <div>
+                            <img class="card-carousel-2" data-id="2" src="assets/parkir.jpg" alt="PD Parkir Makassar"
+                                style="object-fit: cover;" width="200px" height="200px">
                         </div>
-                        
+                        <div>
+                            <img class="card-carousel-3" data-id="3" src="assets/tatatertib.jpg"
+                                alt="Student Discipline System" style="object-fit: cover;" width="200px" height="200px">
+                        </div>
+                        <div>
+                            <img class="card-carousel-4" data-id="4" src="assets/tracer.jpg" alt="Tracer Study System"
+                                style="object-fit: cover;" width="200px" height="200px">
+                        </div>
                     </div>
 
-                    <div class=" detail-carousel-1 mt-5 " id="detail-1" >
+                    <div class="detail-carousel-1 mt-5" id="detail-1">
                         <div class="row ">
-                            
                             <div class="col-md-6 ">
-                                <img src="assets/portfolio1.jpg"  alt="SiKato" style="object-fit: cover;" width="100%" height="300px">
+                                <img src="assets/kol.jpg" alt="KOL Management System" style="object-fit: cover;"
+                                    width="100%" height="300px">
                             </div>
                             <div class="col-md-6">
                                 <div class="my-4">
-
-                                    <h4 class="fw-bold">SiKato | Point of Sale</h4>
-                                    <span class="text-muted">Store Cashier System</span> 
+                                    <h4 class="fw-bold">KOL Management System</h4>
+                                    <span class="text-muted">5758 Creative Lab</span>
                                     <p class="text-secondary pt-2">
-                                        Sikato is a store cashier system that features user management, product management, and transaction features. Sikato also has a feature to view transaction history. This application makes it possible to help and simplify work in the store.
+                                        Together with the team, developed a KOL Management System for 5758 Creative Lab
+                                        equipped with a social media follower scraping feature. This project was
+                                        implemented using Laravel - Inertia React and PostgreSQL to improve operational
+                                        efficiency.
                                     </p>
                                 </div>
                             </div>
                         </div>
-
                     </div>
-                    
-                    <div class="row detail-carousel-2 mt-5" id="detail-2" >
-                        <div class="row">
 
+                    <div class="row detail-carousel-2 mt-5" id="detail-2">
+                        <div class="row">
                             <div class="col-md-6 ">
-                                <img src="assets/portfolio2.png"  alt="Uangkoo" style="object-fit: cover;" width="100%" height="300px">
+                                <img src="assets/parkir.jpg" alt="PD Parkir Makassar Raya" style="object-fit: cover;"
+                                    width="100%" height="300px">
                             </div>
                             <div class="col-md-6">
                                 <div class="my-4">
-
-                                    <h4 class="fw-bold">Uangkoo</h4>
-                                    <span class="text-muted">Financial Management App</span>
+                                    <h4 class="fw-bold">PD Parkir Makassar Raya</h4>
+                                    <span class="text-muted">Management System</span>
                                     <p class="text-secondary pt-2">
-                                        Uangkoo is a mobile application that has a function for financial management. this application is made using Flutter and SQLite.
+                                        Worked with a team to develop a web management system for PD Parkir Makassar
+                                        Raya to digitalize previously manual operations and revenue reporting. Built
+                                        with PHP (Laravel) and MySQL, this platform centralizes the management of
+                                        parking data, transactions, and reports efficiently. The project successfully
+                                        improved transparency and provided an analytical dashboard to support faster,
+                                        data-driven management decision-making.
                                     </p>
                                 </div>
                             </div>
                         </div>
-
+                    </div>
+                    <div class="row detail-carousel-3 mt-5" id="detail-3">
+                        <div class="row">
+                            <div class="col-md-6 ">
+                                <img src="assets/tatatertib.jpg" alt="Student Discipline System"
+                                    style="object-fit: cover;" width="100%" height="300px">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="my-4">
+                                    <h4 class="fw-bold">SiTatib</h4>
+                                    <span class="text-muted">Student Discipline System</span>
+                                    <p class="text-secondary pt-2">
+                                        This project is the result of the Project Based Learning (PBL) program with a
+                                        case study focused on digitizing the student code of conduct management process.
+                                        It aims to address the challenges of manual violation recording and monitoring
+                                        by creating an efficient and structured digital platform. The system was
+                                        developed from the ground up using PHP Native and MySQL, enabling centralized
+                                        management of violation records, penalty points, and student histories. It also
+                                        features an analytical dashboard that improves discipline monitoring efficiency
+                                        and supports faster, data-driven student development processes.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row detail-carousel-4 mt-5" id="detail-4">
+                        <div class="row">
+                            <div class="col-md-6 ">
+                                <img src="assets/tracer.jpg" alt="Tracer Study System" style="object-fit: cover;"
+                                    width="100%" height="300px">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="my-4">
+                                    <h4 class="fw-bold">SiTatib</h4>
+                                    <span class="text-muted">Tracer Study System</span>
+                                    <p class="text-secondary pt-2">
+                                        This project is the result of the Base Learning Project program with a case
+                                        study aimed at addressing the challenges of manual alumni tracking by creating
+                                        an efficient and structured digital platform. The developed system allows
+                                        centralized management of alumni data, facilitates online questionnaire
+                                        completion by alumni and their supervisors, and presents the data results in the
+                                        form of informative visualizations on a dashboard.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
             </div>
+
             <div class="col-12 pt-5 mb-0 mb-md-5 reveal">
                 <span class="text-experience fw-bold ">Experience</span>
                 <div class="mb-4 mb-md-5"></div>
@@ -184,53 +378,77 @@
                 </hr>
                 <div class="row mt-4 mt-md-5">
                     <div class="col-md-4 row">
-                        <span class="fw-bold fs-5">Nexteam Teknologi Indonesia | Metrotech Digital Asia</span>
-                        <span class=" text-secondary fs-5">(Okt 2023 - Present)</span>
+                        <span class="fw-bold fs-5">PT Jeri Project Visionary</span>
+                        <span class=" text-secondary fs-5">(Jun 2025 - Aug 2025)</span>
                     </div>
                     <div class="col-md-8 row mt-4 mt-md-0">
                         <span class="fw-bold fs-5 mb-2">Laravel Developer</span>
-                        <span class="text-secondary fs-5">- Develop web applications with Laravel framework</span>
-                        <span class="fw-bold fs-5 mb-2 mt-4">Tools Used:</span>
-                        <span class="text-secondary fs-5">VSCode, Laragon, Navicat, Postman</span>
+                        <span class="text-secondary fs-5">- Developed Warehouse Management System using Laravel and
+                            MySQL for PT Dasan Pan Pasific Indonesia.</span>
                     </div>
                 </div>
                 <div class="row mt-4 mt-md-5">
                     <div class="col-md-4 row">
-                        <span class="fw-bold fs-5">Sekawan Media Informatika</span>
-                        <span class=" text-secondary fs-5">(Jan 2022 - Des 2022)</span>
+                        <span class="fw-bold fs-5">CV. Nexteam Teknologi Indonesia | 5758 Creative Lab</span>
+                        <span class=" text-secondary fs-5">(Dec 2024 - Jun 2025)</span>
                     </div>
                     <div class="col-md-8 row mt-4 mt-md-0">
-                        <span class="fw-bold fs-5 mb-2">Back End Developer</span>
-                        <span class="text-secondary fs-5">- Building web applications with php framework</span>
-                        <span class="text-secondary fs-5">- Maintain the app with feature additions and bug
-                            fixing</span>
-                        <span class="fw-bold fs-5 mb-2 mt-4">Tools Used:</span>
-                        <span class="text-secondary fs-5">VSCode, XAMPP, Laragon, Navicat, Postman</span>
+                        <span class="fw-bold fs-5 mb-2">Laravel Developer</span>
+                        <span class="text-secondary fs-5">- Designed and implemented KOL Management System using
+                            Laravel, Inertia, React.js, and PostgreSQL.</span>
+                        <span class="text-secondary fs-5">- Developed data scraping feature using Python
+                            (BeautifulSoup).</span>
+                    </div>
+                </div>
+                <div class="row mt-4 mt-md-5">
+                    <div class="col-md-4 row">
+                        <span class="fw-bold fs-5">CV. Nexteam Teknologi Indonesia | Metrotech Digital Asia</span>
+                        <span class=" text-secondary fs-5">(Oct 2023 - Sep 2024)</span>
+                    </div>
+                    <div class="col-md-8 row mt-4 mt-md-0">
+                        <span class="fw-bold fs-5 mb-2">Laravel Developer</span>
+                        <span class="text-secondary fs-5">- Developed PD Parkir Makassar Raya management system using
+                            Laravel & MySQL to digitalize reporting workflow.</span>
+                    </div>
+                </div>
+                <div class="row mt-4 mt-md-5">
+                    <div class="col-md-4 row">
+                        <span class="fw-bold fs-5">PT. Sekawan Media Informatika</span>
+                        <span class=" text-secondary fs-5">(Jan 2022 - Dec 2022)</span>
+                    </div>
+                    <div class="col-md-8 row mt-4 mt-md-0">
+                        <span class="fw-bold fs-5 mb-2">Backend Developer Intern</span>
+                        <span class="text-secondary fs-5">- Built complaint management website using CodeIgniter 3,
+                            jQuery, and MySQL.</span>
+                        <span class="text-secondary fs-5">- Maintained SD report app with new curriculum and added
+                            features.</span>
+                        <span class="text-secondary fs-5">- Developed expert marketplace app using Laravel 9 and
+                            MySQL.</span>
                     </div>
                 </div>
             </div>
+
             <div class="pt-5 d-flex justify-content-center reveal">
                 <p class="text-experience fw-bold mt-5">Interested to hire me or work with me?</p>
             </div>
             <div class="pt-3 pb-5 d-flex justify-content-center reveal">
                 <a class="btn text-white" style="background: rgb(18,96,204);
                 background: linear-gradient(128deg, rgba(18,96,204,1) 0%, rgba(41,197,246,1) 79%);"
-                    href="https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=fikaralghifari0504@gmail.com"
-                    target="blank">Email Me</a>
+                    href="mailto:fikaralghifari0504@gmail.com" target="blank">Email Me</a>
             </div>
         </div>
     </div>
+
     <div class="footer mb-5">
         <div class="mt-5"></div>
         <hr>
         </hr>
         <div class="container ">
-            <div class="mt-5">
-
-            </div>
-            <span class="mt-5">All rights reserved. © Dzulfikar Muhammad Al Ghifari 2023.</span>
+            <div class="mt-5"></div>
+            <span class="mt-5">All rights reserved. © Dzulfikar Muhammad Al Ghifari 2025.</span>
         </div>
     </div>
+
     <script src="plugins/bootstrap53/bootstrap.bundle.min.js"></script>
     <script src="plugins/jquery-3.6.0/dist/jquery.min.js"></script>
     <script src="plugins/jquery-3.6.0/dist/jquery.slim.min.js"></script>
@@ -252,8 +470,6 @@
             }
         }
         window.addEventListener("scroll", reveal);
-
-        // To check the scroll position on page load
         reveal();
     </script>
 </body>
