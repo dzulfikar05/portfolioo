@@ -4,13 +4,15 @@ $(document).ready(function () {
     "detail-carousel-2",
     "detail-carousel-3",
     "detail-carousel-4",
+    "detail-carousel-5",
   ];
   
   var list_carousel = [
     "card-carousel-1", 
     "card-carousel-2",
     "card-carousel-3",
-    "card-carousel-4"
+    "card-carousel-4",
+    "card-carousel-5"
   ];
 
   $(() => {
