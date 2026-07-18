@@ -4,504 +4,582 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dzulfikar</title>
-    <link href="plugins/bootstrap53/bootstrap.min.css" rel="stylesheet">
-    <link href='fonts.googleapis.com/css?family=Comfortaa:400,700' ; rel='stylesheet' type='text/css'>
+    <title>Dzulfikar Muhammad Al Ghifari — Web Developer &amp; Data Analyst</title>
+    <meta name="description"
+        content="Portfolio of Dzulfikar Muhammad Al Ghifari, Malang-based web developer and data analyst specializing in Laravel and data-driven insights.">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
         rel="stylesheet">
 
-    <link href="plugins/custom/main.css" rel="stylesheet">
-    <link href="plugins/custom/main-mob.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="plugins/owlcarousel/dist/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="plugins/owlcarousel/dist/assets/owl.theme.default.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <style>
+        :root {
+            --bg: #f9fafc;
+            --surface: #ffffff;
+            --ink: #10182b;
+            --muted: #5b6472;
+            --line: #e6eaf1;
+            --blue-deep: #0b3d91;
+            --blue: #1260cc;
+            --cyan: #29c5f6;
+            --gradient: linear-gradient(128deg, var(--blue) 0%, var(--cyan) 79%);
+            --radius: 18px;
+            --shadow: 0 20px 45px -20px rgba(11, 61, 145, 0.18);
+            --maxw: 1080px;
+        }
+
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
-            font-family: 'Poppins', sans-serif !important;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--ink);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
         }
-    </style>
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif !important;
-            background-color: #f9fafc;
-            color: #1a1a1a;
-            line-height: 1.7;
-        }
+        h1, h2, h3, h4 { font-family: 'Sora', sans-serif; margin: 0; letter-spacing: -0.02em; }
+        a { color: inherit; }
+        img { max-width: 100%; display: block; }
+        .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
 
-        /* Headline utama */
-        .headline-main {
-            font-size: 3rem;
-            font-weight: 700;
-            color: #0b3d91;
-            letter-spacing: -0.5px;
+        /* ---------- Nav ---------- */
+        .nav {
+            position: sticky; top: 0; z-index: 50;
+            background: rgba(249, 250, 252, 0.82);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--line);
         }
+        .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+        .nav-logo { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 1.05rem; display: flex; align-items: center; gap: 8px; }
+        .nav-logo .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--gradient); display: inline-block; }
+        .nav-links { display: flex; gap: 26px; list-style: none; margin: 0; padding: 0; }
+        .nav-links a { font-size: 0.92rem; font-weight: 500; text-decoration: none; color: var(--muted); transition: color .2s ease; }
+        .nav-links a:hover { color: var(--blue-deep); }
+        .nav-toggle { display: none; }
 
-        /* Subheadline */
-        .slogan {
-            font-weight: 400;
-            font-size: 1.2rem;
-            letter-spacing: 0.5px;
-        }
-
-        /* Gambar profil */
-        .pp-main {
-            width: 100%;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .pp-main:hover {
-            transform: scale(1.03);
-        }
-
-        /* Tombol umum */
+        /* ---------- Buttons ---------- */
         .btn {
-            font-weight: 500;
-            border-radius: 10px;
-            padding: 10px 18px;
-            transition: all 0.3s ease;
+            display: inline-flex; align-items: center; gap: 8px;
+            font-family: 'Sora', sans-serif; font-weight: 600; font-size: 0.92rem;
+            padding: 12px 22px; border-radius: 12px; text-decoration: none; border: none; cursor: pointer;
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+        .btn-primary { background: var(--gradient); color: #fff; box-shadow: 0 12px 24px -8px rgba(18, 96, 204, 0.45); }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 18px 30px -8px rgba(18, 96, 204, 0.55); }
+        .btn-ghost { background: transparent; color: var(--blue-deep); border: 1.5px solid var(--line); }
+        .btn-ghost:hover { border-color: var(--blue); transform: translateY(-2px); }
+
+        /* ---------- Hero ---------- */
+        .hero { padding: 96px 0 40px; overflow: hidden; }
+        .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center; }
+        .eyebrow { font-size: 0.82rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--blue); margin-bottom: 14px; display: block; }
+        .hero h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 800; line-height: 1.08; color: var(--blue-deep); }
+        .hero h1 .accent { background: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .hero p.role { font-size: 1.1rem; margin-top: 16px; color: var(--muted); font-weight: 500; }
+        .role-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+        .role-tag {
+            font-size: 0.78rem; font-weight: 600; color: var(--blue-deep);
+            background: rgba(18, 96, 204, 0.08); border: 1px solid rgba(18, 96, 204, 0.18);
+            padding: 5px 12px; border-radius: 999px;
+        }
+        .hero p.bio { margin-top: 20px; color: var(--muted); font-size: 1rem; max-width: 46ch; }
+        .hero-actions { display: flex; gap: 14px; margin-top: 32px; flex-wrap: wrap; }
+        .hero-photo { position: relative; }
+        .hero-photo .blob {
+            position: absolute; inset: -14% -18%; background: var(--gradient);
+            filter: blur(50px); opacity: 0.35;
+            border-radius: 42% 58% 65% 35% / 45% 40% 60% 55%;
+            z-index: 0;
+        }
+        .hero-photo img { position: relative; z-index: 1; border-radius: 24px; box-shadow: var(--shadow); aspect-ratio: 1/1; object-fit: cover; width: 100%; }
+        .socials { display: flex; gap: 14px; margin-top: 28px; flex-wrap: wrap; }
+        .social-pill {
+            display: flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 999px;
+            border: 1px solid var(--line); background: var(--surface); font-size: 0.86rem; font-weight: 500;
+            text-decoration: none; color: var(--ink); transition: border-color .2s ease, transform .2s ease;
+        }
+        .social-pill:hover { border-color: var(--blue); transform: translateY(-2px); }
+        .social-pill svg { width: 16px; height: 16px; }
+
+        /* ---------- Section shell ---------- */
+        section.block { padding: 76px 0; }
+        .section-head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 48px; }
+        .section-head .index { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 0.85rem; color: var(--cyan); }
+        .section-head h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); color: var(--blue-deep); font-weight: 700; }
+        .section-head::after { content: ''; flex: 1; height: 1px; background: var(--line); }
+
+        /* ---------- Timeline (education & experience) ---------- */
+        .timeline { position: relative; padding-left: 28px; border-left: 2px solid var(--line); }
+        .t-item { position: relative; padding-bottom: 44px; }
+        .t-item:last-child { padding-bottom: 0; }
+        .t-item::before {
+            content: ''; position: absolute; left: -34px; top: 4px; width: 12px; height: 12px;
+            border-radius: 50%; background: var(--surface); border: 3px solid var(--blue);
+        }
+        .t-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; margin-bottom: 6px; }
+        .t-org { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 1.08rem; color: var(--ink); }
+        .t-date { font-size: 0.8rem; font-weight: 600; color: var(--blue); background: rgba(18, 96, 204, 0.08); padding: 3px 10px; border-radius: 999px; }
+        .t-role { font-weight: 600; color: var(--blue-deep); margin-bottom: 8px; display: block; }
+        .t-item ul { margin: 8px 0 0; padding-left: 18px; color: var(--muted); font-size: 0.95rem; }
+        .t-item ul li { margin-bottom: 4px; }
+        .t-empty { color: var(--muted); font-size: 0.9rem; font-style: italic; }
+
+        /* ---------- Skills ---------- */
+        .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        .skill-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px 26px; }
+        .skill-card h3 { font-size: 1.05rem; color: var(--blue-deep); display: flex; align-items: center; gap: 10px; }
+        .skill-card .skill-icon {
+            width: 34px; height: 34px; border-radius: 10px; background: var(--gradient);
+            display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+        }
+        .skill-card .skill-icon svg { width: 18px; height: 18px; color: #fff; }
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+        .skill-tags span {
+            font-size: 0.82rem; font-weight: 500; color: var(--muted); background: var(--bg);
+            border: 1px solid var(--line); padding: 5px 12px; border-radius: 999px;
         }
 
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 18px rgba(18, 96, 204, 0.3);
-        }
+        /* ---------- Portfolio grid ---------- */
+        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+        .p-card { background: var(--surface); border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); cursor: pointer; transition: transform .25s ease, box-shadow .25s ease; }
+        .p-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+        .p-card .thumb { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+        .p-card .p-body { padding: 16px 18px 20px; }
+        .p-card h3 { font-size: 1.02rem; color: var(--ink); }
+        .p-card .p-tag { font-size: 0.82rem; color: var(--muted); margin-top: 4px; display: block; }
+        .p-card .p-open { margin-top: 12px; font-size: 0.82rem; font-weight: 600; color: var(--blue); display: flex; align-items: center; gap: 6px; }
 
-        /* Section title (Education, Portfolio, Experience) */
-        .text-experience {
-            font-size: 2rem;
-            color: #0b3d91;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-left: 5px solid #1260cc;
-            padding-left: 12px;
-        }
+        /* ---------- Modal ---------- */
+        .modal-overlay { position: fixed; inset: 0; background: rgba(11, 20, 40, 0.55); display: none; align-items: center; justify-content: center; padding: 24px; z-index: 100; backdrop-filter: blur(3px); }
+        .modal-overlay.open { display: flex; }
+        .modal { background: var(--surface); border-radius: 20px; max-width: 760px; width: 100%; max-height: 86vh; overflow-y: auto; box-shadow: 0 30px 70px -20px rgba(0, 0, 0, 0.35); }
+        .modal img { width: 100%; max-height: 320px; object-fit: cover; border-radius: 20px 20px 0 0; }
+        .modal-body { padding: 28px 32px 32px; }
+        .modal-body .m-tag { color: var(--blue); font-weight: 600; font-size: 0.85rem; }
+        .modal-body h3 { font-size: 1.4rem; margin-top: 6px; color: var(--blue-deep); }
+        .modal-body p { color: var(--muted); margin-top: 14px; }
+        .modal-close { position: absolute; top: 16px; right: 16px; z-index: 2; width: 34px; height: 34px; border-radius: 50%; border: none; background: rgba(255, 255, 255, 0.9); cursor: pointer; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); }
+        .modal-inner { position: relative; }
 
-        /* Divider elegan */
-        hr {
-            border: none;
-            border-top: 2px solid #e2e8f0;
-            margin-top: 1.5rem;
-            margin-bottom: 2rem;
-        }
+        /* ---------- Contact / footer ---------- */
+        .contact { text-align: center; padding: 90px 0 60px; }
+        .contact h2 { font-size: clamp(1.6rem, 4vw, 2.3rem); color: var(--blue-deep); font-weight: 800; }
+        .contact p { color: var(--muted); margin: 14px auto 30px; max-width: 46ch; }
+        footer { border-top: 1px solid var(--line); padding: 28px 0; }
+        footer .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+        footer p { color: var(--muted); font-size: 0.85rem; margin: 0; }
 
-        /* Detail text sekunder */
-        .text-secondary {
-            color: #4b5563 !important;
-        }
+        /* ---------- Reveal on scroll ---------- */
+        .reveal { opacity: 0; transform: translateY(28px); transition: all .7s cubic-bezier(.2, .7, .3, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
 
-        /* Carousel style */
-        .owl-carousel img {
-            border-radius: 12px;
-            transition: all 0.3s ease-in-out;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-        }
-
-        .owl-carousel img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-        }
-
-        /* Section reveal animation */
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.7s ease-in-out;
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Footer */
-        .footer {
-            text-align: center;
-            color: #6b7280;
-            font-size: 0.95rem;
-        }
-
-        .footer hr {
-            width: 80%;
-            margin: 30px auto;
-            border-top: 1px solid #e5e7eb;
-        }
-
-        /* Responsif halus */
-        @media (max-width: 768px) {
-            .headline-main {
-                font-size: 2.2rem;
+        /* ---------- Responsive ---------- */
+        @media (max-width: 860px) {
+            .hero-grid { grid-template-columns: 1fr; }
+            .hero-photo { max-width: 320px; margin: 0 auto; order: -1; }
+            .grid { grid-template-columns: repeat(2, 1fr); }
+            .skills-grid { grid-template-columns: 1fr; }
+            .nav-links {
+                position: absolute; top: 68px; left: 0; right: 0; flex-direction: column;
+                background: var(--surface); padding: 18px 24px; border-bottom: 1px solid var(--line);
+                display: none; gap: 16px;
             }
-
-            .text-experience {
-                font-size: 1.6rem;
-            }
-
-            .btn {
-                width: 100%;
-            }
+            .nav-links.open { display: flex; }
+            .nav-toggle { display: block; background: none; border: none; cursor: pointer; width: 30px; height: 22px; position: relative; }
+            .nav-toggle span { position: absolute; left: 0; right: 0; height: 2px; background: var(--blue-deep); border-radius: 2px; }
+            .nav-toggle span:nth-child(1) { top: 0; }
+            .nav-toggle span:nth-child(2) { top: 10px; }
+            .nav-toggle span:nth-child(3) { top: 20px; }
+        }
+        @media (max-width: 560px) {
+            .grid { grid-template-columns: 1fr; }
+            .hero { padding-top: 76px; }
+            section.block { padding: 56px 0; }
         }
     </style>
-
 </head>
 
 <body>
-    <div class="header">
-        <div class="container mt-5">
-            <div class="col-12">
-                <div class="text-secondary fs-6">HELLO WORLD !</div>
+
+    <nav class="nav">
+        <div class="wrap">
+            <div class="nav-logo"><span class="dot"></span> Dzulfikar</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="wrap hero-grid">
+            <div class="reveal">
+                <span class="eyebrow">Malang, Indonesia</span>
+                <h1>Hi, I'm Dzulfikar —<br>copy, paste, and <span class="accent">learn</span></h1>
+                <p class="role">Business Information Systems student · Web Developer &amp; Data Analyst</p>
+                <div class="role-tags">
+                    <span class="role-tag">Web Development</span>
+                    <span class="role-tag">Data Analysis</span>
+                </div>
+                <p class="bio">
+                    I'm a student majoring in Business Information Systems at the State Polytechnic of Malang,
+                    focused on web-based applications and data management. Alongside building Laravel projects
+                    end to end — from backend logic to system integration — I also enjoy digging into data:
+                    turning raw numbers and reviews into sentiment analysis, forecasts, and reports that are
+                    easier to act on.
+                </p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="https://drive.google.com/file/d/1U83Ix4lP-AEOylT5ig183BaalcBBpsRk/view?usp=sharing" target="_blank" rel="noopener">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                            <polyline points="14 2 14 8 20 8" />
+                        </svg>
+                        View My CV
+                    </a>
+                    <a class="btn btn-ghost" href="#portfolio">See Portfolio</a>
+                </div>
+                <div class="socials">
+                    <a class="social-pill" href="https://www.linkedin.com/in/dzulfikar-muhammad-al-ghifari-752612288/" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z" />
+                        </svg>
+                        LinkedIn
+                    </a>
+                    <a class="social-pill" href="https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=fikaralghifari0504@gmail.com" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16v16H4z" />
+                            <path d="m4 6 8 7 8-7" />
+                        </svg>
+                        Email
+                    </a>
+                    <a class="social-pill" href="https://medium.com/@d.zullfi" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42c1.87 0 3.38 2.87 3.38 6.42zM24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z" />
+                        </svg>
+                        Medium
+                    </a>
+                </div>
+            </div>
+            <div class="hero-photo reveal">
+                <div class="blob"></div>
+                <img src="assets/pp.jpg" alt="Dzulfikar Muhammad Al Ghifari">
             </div>
         </div>
-    </div>
+    </header>
 
-    <div class="content">
-        <div class="container ">
-
-            <div class="col-12 d-flex row mb-5 reveal">
-                <span class="headline-main mt-3">I am Dzulfikar</span>
-                <span class="fs-3 mt-3">Malang-based as <span class="fw-bold px-2 text-white" style="background: rgb(18,96,204);
-                    background: linear-gradient(128deg, rgba(18,96,204,1) 0%, rgba(41,197,246,1) 79%);">Web
-                        Developer</span></span>
-                <span class=" slogan text-secondary">Copy, Paste, and Learn</span>
-            </div>
-
-            <div class="pt-md-5 d-flex row reveal">
-                <div class="col-md-4">
-                    <img src="assets/pp.png" class="pp-main" alt="Dzulfikar Muhammad Al Ghifari">
-                </div>
-                <div class="col-md-5 ">
-                    <div class="mx-md-5">
-                        <span class="fs-4">
-                            Business Information Systems Student of State Polytechnic of Malang
+    <section class="block" id="skills">
+        <div class="wrap">
+            <div class="section-head reveal"><span class="index">01</span><h2>What I Do</h2></div>
+            <div class="skills-grid reveal">
+                <div class="skill-card">
+                    <h3>
+                        <span class="skill-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
                         </span>
-                        <p class="fs-5 mt-3 mt-md-5 fw-light">
-                            I am a student majoring in Business Information Systems at the State Polytechnic of Malang,
-                            passionate about software development — especially in web-based applications and data
-                            management.
-                            I have hands-on experience developing Laravel-based projects, from backend to system
-                            integration.
-                            I am familiar with the Laravel ecosystem, eager to learn, and ready to contribute
-                            professionally with both technical and business understanding.
-                        </p>
+                        Web Development
+                    </h3>
+                    <p style="color:var(--muted); margin-top:12px; font-size:0.95rem;">
+                        Building end-to-end web systems — from database design and backend logic to
+                        user-facing interfaces — mainly with the Laravel ecosystem.
+                    </p>
+                    <div class="skill-tags">
+                        <span>Laravel</span>
+                        <span>PHP</span>
+                        <span>MySQL / PostgreSQL</span>
+                        <span>React / Inertia</span>
                     </div>
                 </div>
-                <div class="col-md-3 mt-5 mt-md-0">
-                    <div class="d-flex justify-content-center">
-                        <a href="https://drive.google.com/file/d/1U83Ix4lP-AEOylT5ig183BaalcBBpsRk/view?usp=sharing"
-                            class="btn text-white w-100 w-md-75" style="background: rgb(18,96,204); 
-                        background: linear-gradient(128deg, rgba(18,96,204,1) 0%, rgba(41,197,246,1) 79%);"
-                            target="blank"><i class="fa fa-file"></i> Link to My CV</a>
-                    </div>
-                    <div class="mt-4">
-                        <span class="fs-5 ">Find Me Online</span>
-                        <div class="flex-row mt-3">
-                            <a class="text-dark" style="text-decoration: none"
-                                href="https://www.linkedin.com/in/dzulfikar-muhammad-al-ghifari-752612288/"
-                                target="blank">
-                                <img src="assets/linkedin.png" alt="" height="18px" style="object-fit: cover">
-                                Linkedin
-                            </a>
-                        </div>
-                        <div class="flex-row mt-2">
-                            <a class="text-dark" style="text-decoration: none"
-                                href="https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=fikaralghifari0504@gmail.com"
-                                target="blank">
-                                <img src="assets/email.png" alt="" height="20px" style="object-fit: cover">
-                                Email
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 pt-5 mb-0 mb-md-5 reveal">
-                <span class="text-experience fw-bold ">Education</span>
-                <div class="mb-4 mb-md-5"></div>
-                <hr>
-                </hr>
-
-                <div class="row mt-4 mt-md-5">
-                    <div class="col-md-4 row">
-                        <span class="fw-bold fs-5">State Polytechnic of Malang</span>
-                        <span class=" text-secondary fs-5">(2023 - Present)</span>
-                    </div>
-                    <div class="col-md-8 row mt-4 mt-md-0">
-                        <span class="fw-bold fs-5 mb-2">Business Information Systems</span>
-                        <span class="text-secondary fs-5">- Actively involved in developing Tracer Study and Student
-                            Discipline Management Systems using Laravel & MySQL.</span>
-                        <span class="text-secondary fs-5">- Learned system analysis, backend & frontend web development,
-                            and data management.</span>
-                    </div>
-                </div>
-                <div class="row mt-4 mt-md-5">
-                    <div class="col-md-4 row">
-                        <span class="fw-bold fs-5">SMK PGRI 3 Malang</span>
-                        <span class=" text-secondary fs-5">(2020 - 2023)</span>
-                    </div>
-                    <div class="col-md-8 row mt-4 mt-md-0">
-                        <span class="fw-bold fs-5 mb-2">Software Engineering</span>
-                        <span class="text-secondary fs-5">- Learned basic programming (PHP, Java, JavaScript)</span>
-                        <span class="text-secondary fs-5">- Learned mobile app development using Android Studio</span>
-                        <span class="text-secondary fs-5">- Learned database management (MySQL, PostgreSQL)</span>
-                        <span class="text-secondary fs-5">- Final project: Point of Sale (POS) Application</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 pt-5 mb-0 mb-md-5 reveal">
-                <span class="text-experience fw-bold ">Portfolio</span>
-                <div class="mb-4 mb-md-5"></div>
-                <hr>
-                </hr>
-                <div class="row mt-4 mt-md-5">
-                    <div class="owl-carousel">
-                        <div>
-                            <img class="card-carousel-1" data-id="1" src="assets/kol.jpg" alt="KOL Management System"
-                                style="object-fit: cover;" width="200px" height="200px">
-                        </div>
-                        <div>
-                            <img class="card-carousel-2" data-id="2" src="assets/parkir.jpg" alt="PD Parkir Makassar"
-                                style="object-fit: cover;" width="200px" height="200px">
-                        </div>
-                        <div>
-                            <img class="card-carousel-3" data-id="3" src="assets/tatatertib.jpg"
-                                alt="Student Discipline System" style="object-fit: cover;" width="200px" height="200px">
-                        </div>
-                        <div>
-                            <img class="card-carousel-4" data-id="4" src="assets/tracer.jpg" alt="Tracer Study System"
-                                style="object-fit: cover;" width="200px" height="200px">
-                        </div>
-                        <div>
-                            <img class="card-carousel-5" data-id="5" src="assets/chatAiReport.png" alt="Chat AI Report System"
-                                style="object-fit: cover;" width="200px" height="200px">
-                        </div>
-                    </div>
-
-                    <div class="detail-carousel-1 mt-5" id="detail-1">
-                        <div class="row ">
-                            <div class="col-md-6 ">
-                                <img src="assets/kol.jpg" alt="KOL Management System" style="object-fit: cover;"
-                                    width="100%" height="300px">
-                            </div>
-                            <div class="col-md-6">
-                                <div class="my-4">
-                                    <h4 class="fw-bold">KOL Management System</h4>
-                                    <span class="text-muted">5758 Creative Lab</span>
-                                    <p class="text-secondary pt-2">
-                                        Together with the team, developed a KOL Management System for 5758 Creative Lab
-                                        equipped with a social media follower scraping feature. This project was
-                                        implemented using Laravel - Inertia React and PostgreSQL to improve operational
-                                        efficiency.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row detail-carousel-2 mt-5" id="detail-2">
-                        <div class="row">
-                            <div class="col-md-6 ">
-                                <img src="assets/parkir.jpg" alt="PD Parkir Makassar Raya" style="object-fit: cover;"
-                                    width="100%" height="300px">
-                            </div>
-                            <div class="col-md-6">
-                                <div class="my-4">
-                                    <h4 class="fw-bold">PD Parkir Makassar Raya</h4>
-                                    <span class="text-muted">Management System</span>
-                                    <p class="text-secondary pt-2">
-                                        Worked with a team to develop a web management system for PD Parkir Makassar
-                                        Raya to digitalize previously manual operations and revenue reporting. Built
-                                        with PHP (Laravel) and MySQL, this platform centralizes the management of
-                                        parking data, transactions, and reports efficiently. The project successfully
-                                        improved transparency and provided an analytical dashboard to support faster,
-                                        data-driven management decision-making.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row detail-carousel-3 mt-5" id="detail-3">
-                        <div class="row">
-                            <div class="col-md-6 ">
-                                <img src="assets/tatatertib.jpg" alt="Student Discipline System"
-                                    style="object-fit: cover;" width="100%" height="300px">
-                            </div>
-                            <div class="col-md-6">
-                                <div class="my-4">
-                                    <h4 class="fw-bold">SiTatib</h4>
-                                    <span class="text-muted">Student Discipline System</span>
-                                    <p class="text-secondary pt-2">
-                                        This project is the result of the Project Based Learning (PBL) program with a
-                                        case study focused on digitizing the student code of conduct management process.
-                                        It aims to address the challenges of manual violation recording and monitoring
-                                        by creating an efficient and structured digital platform. The system was
-                                        developed from the ground up using PHP Native and MySQL, enabling centralized
-                                        management of violation records, penalty points, and student histories. It also
-                                        features an analytical dashboard that improves discipline monitoring efficiency
-                                        and supports faster, data-driven student development processes.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row detail-carousel-4 mt-5" id="detail-4">
-                        <div class="row">
-                            <div class="col-md-6 ">
-                                <img src="assets/tracer.jpg" alt="Tracer Study System" style="object-fit: cover;"
-                                    width="100%" height="300px">
-                            </div>
-                            <div class="col-md-6">
-                                <div class="my-4">
-                                    <h4 class="fw-bold">Tracer Study</h4>
-                                    <span class="text-muted">Tracer Study System</span>
-                                    <p class="text-secondary pt-2">
-                                        This project is the result of the Base Learning Project program with a case
-                                        study aimed at addressing the challenges of manual alumni tracking by creating
-                                        an efficient and structured digital platform. The developed system allows
-                                        centralized management of alumni data, facilitates online questionnaire
-                                        completion by alumni and their supervisors, and presents the data results in the
-                                        form of informative visualizations on a dashboard.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row detail-carousel-5 mt-5" id="detail-5">
-                        <div class="row">
-                            <div class="col-md-6 ">
-                                <img src="assets/chatAiReport.png" alt="Chat AI Report System" style="object-fit: cover;"
-                                    width="100%" height="300px">
-                            </div>
-                            <div class="col-md-6">
-                                <div class="my-4">
-                                    <h4 class="fw-bold">Chat AI Report</h4>
-                                    <span class="text-muted">Chat AI Report System</span>
-                                    <p class="text-secondary pt-2">
-                                        This project is the result of an internship program at PT. Multi Spunindo Jaya
-                                        Tbk., where I designed and developed an AI-powered internal corporate reporting
-                                        system using the company's custom framework. The system was built to streamline
-                                        the reporting process by leveraging AI capabilities for data analysis and report
-                                        generation. I managed the full software development lifecycle (SDLC) for this
-                                        project, from architectural blueprinting to comprehensive technical documentation,
-                                        including a manual book to ensure smooth adoption and usage across the company.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-12 pt-5 mb-0 mb-md-5 reveal">
-                <span class="text-experience fw-bold ">Experience</span>
-                <div class="mb-4 mb-md-5"></div>
-                <hr>
-                </hr>
-
-                <div class="row mt-4 mt-md-5">
-                    <div class="col-md-4 row">
-                        <span class="fw-bold fs-5">PT. Multi Spunindo Jaya Tbk. </span>
-                        <span class="text-secondary fs-5">(Jan 2026 - Jun 2026)</span>
-                    </div>
-                    <div class="col-md-8 row mt-4 mt-md-0">
-                        <span class="fw-bold fs-5 mb-2">IT Programmer Intern</span>
-                        <span class="text-secondary fs-5">
-                            - Designed and developed an AI-powered internal corporate reporting system using the
-                            company's custom framework.
+                <div class="skill-card">
+                    <h3>
+                        <span class="skill-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="18" y1="20" x2="18" y2="10"></line>
+                                <line x1="12" y1="20" x2="12" y2="4"></line>
+                                <line x1="6" y1="20" x2="6" y2="14"></line>
+                            </svg>
                         </span>
-                        <span class="text-secondary fs-5">
-                            - Managed the full software development lifecycle (SDLC), from architectural blueprinting to
-                            comprehensive technical documentation (manual book).
-                        </span>
+                        Data Analysis
+                    </h3>
+                    <p style="color:var(--muted); margin-top:12px; font-size:0.95rem;">
+                        Turning raw data into clear insight — from user review sentiment to trend-based
+                        forecasting — and writing it up in a way that's easy to act on.
+                    </p>
+                    <div class="skill-tags">
+                        <span>Python</span>
+                        <span>Sentiment Analysis</span>
+                        <span>Data Visualization</span>
+                        <span>Forecasting</span>
                     </div>
                 </div>
             </div>
-            <div class="row mt-4 mt-md-5">
-                <div class="col-md-4 row">
-                    <span class="fw-bold fs-5">Freelance</span>
-                    <span class=" text-secondary fs-5">(2023 - 2025)</span>
-                </div>
-                <div class="col-md-8 row mt-4 mt-md-0">
-                    <span class="fw-bold fs-5 mb-2">Laravel Developer</span>
-                    <span class="text-secondary fs-5">- Developed Warehouse Management System using Laravel and
-                        MySQL for PT Dasan Pan Pasific Indonesia.</span>
-                    <span class="text-secondary fs-5">- Designed and implemented KOL Management System using
-                        Laravel, Inertia, React.js, and PostgreSQL.</span>
-                    <span class="text-secondary fs-5">- Developed data scraping feature using Python
-                        (BeautifulSoup).</span>
-                    <span class="text-secondary fs-5">- Developed PD Parkir Makassar Raya management system using
-                        Laravel & MySQL to digitalize reporting workflow.</span>
-                </div>
-            </div>
+        </div>
+    </section>
 
-            <div class="row mt-4 mt-md-5">
-                <div class="col-md-4 row">
-                    <span class="fw-bold fs-5">PT. Sekawan Media Informatika</span>
-                    <span class=" text-secondary fs-5">(Jan 2022 - Dec 2022)</span>
+    <section class="block" id="education">
+        <div class="wrap">
+            <div class="section-head reveal"><span class="index">02</span><h2>Education</h2></div>
+            <div class="timeline reveal">
+                <div class="t-item">
+                    <div class="t-head"><span class="t-org">State Polytechnic of Malang</span><span class="t-date">2023 — Present</span></div>
+                    <span class="t-role">Business Information Systems</span>
+                    <ul>
+                        <li>Actively involved in developing Tracer Study and Student Discipline Management Systems using Laravel &amp; MySQL.</li>
+                        <li>Learned system analysis, backend &amp; frontend web development, and data management.</li>
+                    </ul>
                 </div>
-                <div class="col-md-8 row mt-4 mt-md-0">
-                    <span class="fw-bold fs-5 mb-2">Backend Developer Intern</span>
-                    <span class="text-secondary fs-5">- Built complaint management website using CodeIgniter 3,
-                        jQuery, and MySQL.</span>
-                    <span class="text-secondary fs-5">- Maintained School Management app with new curriculum and
-                        added some
-                        features.</span>
-                    <span class="text-secondary fs-5">- Developed expert marketplace app using Laravel 9 and
-                        MySQL.</span>
+                <div class="t-item">
+                    <div class="t-head"><span class="t-org">SMK PGRI 3 Malang</span><span class="t-date">2020 — 2023</span></div>
+                    <span class="t-role">Software Engineering</span>
+                    <ul>
+                        <li>Learned basic programming (PHP, Java, JavaScript).</li>
+                        <li>Learned mobile app development using Android Studio.</li>
+                        <li>Learned database management (MySQL, PostgreSQL).</li>
+                        <li>Final project: Point of Sale (POS) Application.</li>
+                    </ul>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="pt-5 d-flex justify-content-center reveal">
-            <p class="text-experience fw-bold mt-5">Interested to hire me or work with me?</p>
+    <section class="block" id="portfolio">
+        <div class="wrap">
+            <div class="section-head reveal"><span class="index">03</span><h2>Portfolio</h2></div>
+            <div class="grid reveal" id="portfolioGrid">
+                <div class="p-card" data-id="1">
+                    <img class="thumb" src="assets/kol.jpg" alt="KOL Management System">
+                    <div class="p-body">
+                        <h3>KOL Management System</h3>
+                        <span class="p-tag">5758 Creative Lab</span>
+                        <span class="p-open">View details →</span>
+                    </div>
+                </div>
+                <div class="p-card" data-id="2">
+                    <img class="thumb" src="assets/parkir.jpg" alt="PD Parkir Makassar Raya">
+                    <div class="p-body">
+                        <h3>PD Parkir Makassar Raya</h3>
+                        <span class="p-tag">Management System</span>
+                        <span class="p-open">View details →</span>
+                    </div>
+                </div>
+                <div class="p-card" data-id="3">
+                    <img class="thumb" src="assets/tatatertib.jpg" alt="SiTatib">
+                    <div class="p-body">
+                        <h3>SiTatib</h3>
+                        <span class="p-tag">Student Discipline System</span>
+                        <span class="p-open">View details →</span>
+                    </div>
+                </div>
+                <div class="p-card" data-id="4">
+                    <img class="thumb" src="assets/tracer.jpg" alt="Tracer Study System">
+                    <div class="p-body">
+                        <h3>Tracer Study</h3>
+                        <span class="p-tag">Alumni Tracking System</span>
+                        <span class="p-open">View details →</span>
+                    </div>
+                </div>
+                <div class="p-card" data-id="5">
+                    <img class="thumb" src="assets/chatAiReport.png" alt="Chat AI Report">
+                    <div class="p-body">
+                        <h3>Chat AI Report</h3>
+                        <span class="p-tag">AI Reporting System</span>
+                        <span class="p-open">View details →</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="pt-3 pb-5 d-flex justify-content-center reveal">
-            <a class="btn text-white" style="background: rgb(18,96,204);
-                background: linear-gradient(128deg, rgba(18,96,204,1) 0%, rgba(41,197,246,1) 79%);"
-                href="mailto:fikaralghifari0504@gmail.com" target="blank">Email Me</a>
+    </section>
+
+    <section class="block" id="blog">
+        <div class="wrap">
+            <div class="section-head reveal"><span class="index">04</span><h2>Blog</h2></div>
+            <div class="grid reveal" id="blogGrid" style="grid-template-columns: repeat(3, 1fr);">
+                <a class="p-card" href="https://medium.com/@d.zullfi/melihat-sentimen-pengguna-polri-super-app-berdasarkan-ulasan-di-play-store-47a1ce5993ba" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;">
+                    <img class="thumb" src="https://miro.medium.com/v2/da:true/resize:fill:640:428/0*M8e9lBCuzQfBjU5P" alt="Analisis sentimen pengguna Polri Super App">
+                    <div class="p-body">
+                        <span class="p-tag">Jul 9 · Data Analysis</span>
+                        <h3 style="margin-top:6px;">Sentimen Pengguna Polri Super App dari Ulasan Play Store</h3>
+                        <span class="p-open">Read on Medium →</span>
+                    </div>
+                </a>
+                <a class="p-card" href="https://medium.com/@d.zullfi/performa-inter-milan-mengunci-gelar-scudetto-di-pekan-ke-35-musim-25-26-29a52504c49a" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;">
+                    <img class="thumb" src="https://miro.medium.com/v2/resize:fill:640:428/1*fi3UfxeLgl3SPy2Sz6mTyA.png" alt="Performa Inter Milan musim 25/26">
+                    <div class="p-body">
+                        <span class="p-tag">May 7 · Sports Analytics</span>
+                        <h3 style="margin-top:6px;">Performa Inter Milan: Mengunci Scudetto di Pekan ke-35</h3>
+                        <span class="p-open">Read on Medium →</span>
+                    </div>
+                </a>
+                <a class="p-card" href="https://medium.com/@d.zullfi/forecasting-manchester-united-vs-liverpool-berdasarkan-tren-5-pertandingan-terakhir-d8b1e33abc0f" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;">
+                    <img class="thumb" src="https://miro.medium.com/v2/resize:fill:640:428/1*pI--HXdX4GlgLafVGufcQA.png" alt="Forecasting Manchester United vs Liverpool">
+                    <div class="p-body">
+                        <span class="p-tag">May 2 · Sports Analytics</span>
+                        <h3 style="margin-top:6px;">Forecasting Man United vs Liverpool dari Tren 5 Laga Terakhir</h3>
+                        <span class="p-open">Read on Medium →</span>
+                    </div>
+                </a>
+            </div>
+            <div style="text-align:center; margin-top:32px;">
+                <a class="btn btn-primary" href="https://medium.com/@d.zullfi" target="_blank" rel="noopener">
+                    See More on Medium
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="block" id="experience">
+        <div class="wrap">
+            <div class="section-head reveal"><span class="index">05</span><h2>Experience</h2></div>
+            <div class="timeline reveal">
+                <div class="t-item">
+                    <div class="t-head"><span class="t-org">PT. Naraya Telematika</span><span class="t-date">Jul 2026 — Dec 2026</span></div>
+                    <span class="t-role">Software Engineer Intern</span>
+                    <p class="t-empty">Details to be added.</p>
+                </div>
+                <div class="t-item">
+                    <div class="t-head"><span class="t-org">PT. Multi Spunindo Jaya Tbk.</span><span class="t-date">Jan 2026 — Jun 2026</span></div>
+                    <span class="t-role">IT Programmer Intern</span>
+                    <ul>
+                        <li>Designed and developed an AI-powered internal corporate reporting system using the company's custom framework.</li>
+                        <li>Managed the full software development lifecycle (SDLC), from architectural blueprinting to comprehensive technical documentation (manual book).</li>
+                    </ul>
+                </div>
+                <div class="t-item">
+                    <div class="t-head"><span class="t-org">Freelance</span><span class="t-date">2023 — 2025</span></div>
+                    <span class="t-role">Laravel Developer</span>
+                    <ul>
+                        <li>Developed a Warehouse Management System using Laravel and MySQL for PT Dasan Pan Pasific Indonesia.</li>
+                        <li>Designed and implemented a KOL Management System using Laravel, Inertia, React.js, and PostgreSQL.</li>
+                        <li>Developed a data scraping feature using Python (BeautifulSoup).</li>
+                        <li>Developed the PD Parkir Makassar Raya management system using Laravel &amp; MySQL to digitalize the reporting workflow.</li>
+                    </ul>
+                </div>
+                <div class="t-item">
+                    <div class="t-head"><span class="t-org">PT. Sekawan Media Informatika</span><span class="t-date">Jan 2022 — Dec 2022</span></div>
+                    <span class="t-role">Backend Developer Intern</span>
+                    <ul>
+                        <li>Built a complaint management website using CodeIgniter 3, jQuery, and MySQL.</li>
+                        <li>Maintained a School Management app with a new curriculum and added features.</li>
+                        <li>Developed an expert marketplace app using Laravel 9 and MySQL.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact reveal" id="contact">
+        <div class="wrap">
+            <h2>Interested to hire me or work together?</h2>
+            <p>I'm open to internship, freelance, and full-time opportunities in web development and data analysis.</p>
+            <a class="btn btn-primary" href="mailto:fikaralghifari0504@gmail.com">Email Me</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrap">
+            <p>© 2025 Dzulfikar Muhammad Al Ghifari. All rights reserved.</p>
+            <p>Malang, Indonesia</p>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <div class="modal-inner">
+                <button class="modal-close" id="modalClose">✕</button>
+                <img id="modalImg" src="" alt="">
+                <div class="modal-body">
+                    <span class="m-tag" id="modalTag"></span>
+                    <h3 id="modalTitle"></h3>
+                    <p id="modalText"></p>
+                </div>
+            </div>
         </div>
     </div>
-    </div>
 
-    <div class="footer mb-5">
-        <div class="mt-5"></div>
-        <hr>
-        </hr>
-        <div class="container ">
-            <div class="mt-5"></div>
-            <span class="mt-5">All rights reserved. © Dzulfikar Muhammad Al Ghifari 2025.</span>
-        </div>
-    </div>
-
-    <script src="plugins/bootstrap53/bootstrap.bundle.min.js"></script>
-    <script src="plugins/jquery-3.6.0/dist/jquery.min.js"></script>
-    <script src="plugins/jquery-3.6.0/dist/jquery.slim.min.js"></script>
-    <script src="plugins/owlcarousel/dist/owl.carousel.js"></script>
-    <script src="plugins/owlcarousel/dist/owl.carousel.min.js"></script>
-    <script src="custom.js"></script>
     <script>
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 150;
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                } else {
-                    reveals[i].classList.remove("active");
-                }
+        const projects = {
+            1: {
+                img: "assets/kol.jpg",
+                tag: "5758 Creative Lab",
+                title: "KOL Management System",
+                text: "Together with the team, developed a KOL Management System for 5758 Creative Lab equipped with a social media follower scraping feature. Built with Laravel, Inertia, React, and PostgreSQL to improve operational efficiency."
+            },
+            2: {
+                img: "assets/parkir.jpg",
+                tag: "Management System",
+                title: "PD Parkir Makassar Raya",
+                text: "Worked with a team to build a web management system for PD Parkir Makassar Raya, digitalizing previously manual operations and revenue reporting. Built with Laravel and MySQL, the platform centralizes parking data, transactions, and reports, improving transparency and supporting faster, data-driven decisions."
+            },
+            3: {
+                img: "assets/tatatertib.jpg",
+                tag: "Student Discipline System",
+                title: "SiTatib",
+                text: "A Project Based Learning (PBL) case study digitizing student code-of-conduct management. Built from the ground up with PHP Native and MySQL, it centralizes violation records, penalty points, and student histories, with an analytical dashboard for faster, data-driven student development."
+            },
+            4: {
+                img: "assets/tracer.jpg",
+                tag: "Alumni Tracking System",
+                title: "Tracer Study",
+                text: "A Project Based Learning case study addressing manual alumni tracking. The system centralizes alumni data management, enables online questionnaires for alumni and supervisors, and presents results as informative dashboard visualizations."
+            },
+            5: {
+                img: "assets/chatAiReport.png",
+                tag: "AI Reporting System",
+                title: "Chat AI Report",
+                text: "Built during an internship at PT. Multi Spunindo Jaya Tbk., this is an AI-powered internal corporate reporting system using the company's custom framework, streamlining reporting through AI-driven data analysis. Managed the full SDLC, from architecture to technical documentation and a manual book."
             }
-        }
-        window.addEventListener("scroll", reveal);
-        reveal();
+        };
+
+        const overlay = document.getElementById('modalOverlay');
+        const modalImg = document.getElementById('modalImg');
+        const modalTag = document.getElementById('modalTag');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalText = document.getElementById('modalText');
+
+        document.querySelectorAll('.p-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const id = card.dataset.id;
+                const p = projects[id];
+                modalImg.src = p.img;
+                modalImg.alt = p.title;
+                modalTag.textContent = p.tag;
+                modalTitle.textContent = p.title;
+                modalText.textContent = p.text;
+                overlay.classList.add('open');
+            });
+        });
+
+        function closeModal() { overlay.classList.remove('open'); }
+        document.getElementById('modalClose').addEventListener('click', closeModal);
+        overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+        navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+        const revealEls = document.querySelectorAll('.reveal');
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.12 });
+        revealEls.forEach(el => io.observe(el));
     </script>
+
 </body>
 
 </html>
